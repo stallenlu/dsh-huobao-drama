@@ -1,0 +1,37 @@
+{
+  "name": "dsh-huobao-drama",
+  "displayName": "DSH 火宝短剧（桥接）",
+  "description": "把火宝短剧（chatfire-AI/huobao-drama）后端 HTTP API 桥接为 DSH agent 工具：项目管理、剧本/分镜生成、素材生成、导出与配置查询。后端需自行运行。",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/*.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2"
+  }
+}

@@ -1,0 +1,4 @@
+# dsh bundle patch: register the Huobao Drama bridge tools.
+- insert:
+    - id: huobao-drama
+      name: dsh-huobao-drama
